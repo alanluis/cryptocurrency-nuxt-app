@@ -3,6 +3,7 @@
     <div v-if="!error">
       <SearchCoin v-on:search-coin="searchCoin"></SearchCoin>
       <CoinsTable :data="coins" />
+      <div v-if="coins.length == 0" class="text-center mt-2">No markets were found matching your search criteria.</div>
     </div>
     <div v-if="error" class="text-center">An error has ocurred :(</div>
   </div>
